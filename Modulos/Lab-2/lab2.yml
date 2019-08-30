@@ -10,6 +10,11 @@ Parameters:
     Description: Nome da instancia
 
 Resources:
+  GuardDuty:
+    Type: AWS::GuardDuty::Detector
+    Properties:
+      Enable: True
+      FindingPublishingFrequency: FIFTEEN_MINUTES
   MyInstance:
     Type: AWS::EC2::Instance
     Properties:
