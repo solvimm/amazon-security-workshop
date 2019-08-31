@@ -35,7 +35,9 @@ Solução para bloqueio automático de hosts suspeitos, utilizando os serviços 
 6.  Senha
 7.  Clicar em fazer Login.
 8.  Selecionar a regiao N.Virginia no meunu suspenso
+
 ![Selecionando Região](../../imgs/4.2.png)
+
 9.  Clicar na barra de busca “Find Services” e digitar “S3”
 10.  Clicar em Create Bucket.
 11.  Preencher com os dados:
