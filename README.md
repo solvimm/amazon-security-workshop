@@ -2,6 +2,8 @@
 
 Material referente ao workshop 101 voltado para o público de segurança da informação em ambiente AWS. Esse material foi produzido/adaptado por membros da [Solvimm](https://solvimm.com).
 
+- Criar todos os recursos em **N.Virginia (us-east-1)** 
+
 ## Modulos
 
 Esse workshop é compost de 4 módulos:

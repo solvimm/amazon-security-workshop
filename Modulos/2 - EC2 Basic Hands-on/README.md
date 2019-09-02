@@ -3,6 +3,8 @@
 
 **Instruções:**
 
+- Criar todos os recursos em **N.Virginia (us-east-1)** 
+
 1.  Logue ou crie um usuario com a politica de permissão de **AdministratorAccess** seguindo as instruções do Lab 1
 2.  No painel principal entre em `CloudFormation`
 3.  Mude para a região de *US East (N. Virginia)* no canto superior esquerdo do painel caso esteja em outra região

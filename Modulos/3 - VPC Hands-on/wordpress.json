@@ -34,7 +34,6 @@
             "ConstraintDescription": "must be a valid EC2 instance type."
         },
         "DBClass": {
-            "Default": "db.m1.small",
             "Description": "Database instance class",
             "Type": "String",
             "Default": "db.m4.large",
@@ -507,13 +506,13 @@
             "Metadata": {
                 "AWS::CloudFormation::Init": {
                     "configSets": {
-                        "default": ["extras", "config"]
+                        "default": ["config", "extras"]
                     },
                     "extras": {
                         "commands": {
-                            "enable_php": {
-                                "command": "amazon-linux-extras enable php7.2",
-                                "cwd": "~"
+                            "0_enable_php": {
+                                "command": "sudo yum update -y && sudo amazon-linux-extras install -y php7.2",
+                                "test": "[ ! grep -Fxq '[amzn2extra-php7.2]' /etc/yum.repos.d/amzn2-extras.repo ]"
                             }
                         }
                     },
@@ -526,7 +525,7 @@
                             }
                         },
                         "sources": {
-                            "/var/www/html": "http://wordpress.org/latest.tar.gz"
+                            "/var/www/html": "https://wordpress.org/wordpress-3.0.6.tar.gz"
                         },
                         "files": {
                             "/var/www/html/wordpress/wp-config.php": {

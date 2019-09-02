@@ -17,7 +17,7 @@ Esse template divide o espaço da VPC em um jeito previsível através de multip
 
 ![Arquitetura VPC](../../imgs/5.1.png)
 
-### Implamtação
+### Implantação
 
 1.  No console da AWS, entre no serviço `CloudFormation`
 2.  Clique no botão `Create stack`
