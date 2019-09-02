@@ -50,15 +50,18 @@ Esse template instala e implanta o WordPress em instâncias do Amazon EC2 Amazon
 5.  Clique no botão `Create stack`
 6.  Insira o nome da stack: `wordpress-multiaz`
 7.  Procure os campos `DBUser` e `DBPassword` e os preencha com usuário e senha para o banco
-8.  Procure os campos `DBSubnets` e escolha 2 as subnets privadas (que terminam com 1A e 2A)
+8.  Procure os campos `DBSubnets` subnets privadas `Public subnet 1A` e `Public subnet 2A`
 9.  Procure o campo `KeyName` e selecione a keypair criada anteriormente.
 10. Procure o `VpcId` e escolha a vpc *aws-vpc-template*, criada anteriormente
-11. Procure o `WebServerSubnetId` e escolha um subnet pública (que terminam com 1, 2, 3 ou 4)
+11. Procure o `WebServerSubnetId` e escolha um subnet pública `Public subnet 1`
 12. Clique `Next`
 13. Clique `Next`
 14. Clique em `Create Stack`
 15. Espera mais ou menos 10 minutos para a finalização do template
-
+16. Ao terminar o template, volte ao menu inicial e entre em `EC2``
+17. No menu da esquerda clique em `EC2 Dashboard` e depois em `Running Instanced`
+18. Selecione a instância que você criou via o cloudformation e copie seu **IPv4 Public IP** 
+19. Cole esse IP no navegador seguido de `/wordpress` e de enter, ex: `<IP>/wordpress`
 ## Ref
 -   https://github.com/aws-quickstart/quickstart-aws-vpc/
 -   https://docs.aws.amazon.com/pt_br/AWSCloudFormation/latest/UserGuide/sample-templates-applications-us-east-1.html
