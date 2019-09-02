@@ -49,7 +49,8 @@ Esse template instala e implanta o WordPress em instâncias do Amazon EC2 Amazon
 4.  No console da AWS, entre no serviço `CloudFormation`
 5.  Clique no botão `Create stack`
 6.  Insira o nome da stack: `wordpress-multiaz`
-7.  Procure os campos `DBUser` e `DBPassword` e os preencha com usuário e senha para o banco
+7.  Procure os campos `DBPassword` e `DBUser` e os preencha com usuário e senha para o banco
+    -   A senha do banco deve ser alphanumérica (não deve conter caractere especiais)
 8.  Procure os campos `DBSubnets` subnets privadas `Private subnet 1A` e `Private subnet 2A`
 9.  Procure o campo `KeyName` e selecione a keypair criada anteriormente.
 10. Procure o `VpcId` e escolha a vpc *aws-vpc-template*, criada anteriormente
