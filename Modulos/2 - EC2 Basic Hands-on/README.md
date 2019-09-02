@@ -24,3 +24,5 @@
 10. Clique em `Start Session`
 11. Marque a instancia e clique em `Start session`
 12. Execute algum comando no terminal
+
+**OBS** Utilize o navegador Chrome para o Hands-on para maior compatibilidade com os serviços
