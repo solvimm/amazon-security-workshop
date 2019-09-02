@@ -40,7 +40,7 @@ Esse template divide o espaço da VPC em um jeito previsível através de multip
 
 Esse template instala e implanta o WordPress em instâncias do Amazon EC2 Amazon RDS para armazenamento.
 
-### Implamtação
+### Implantação
 
 1.  No console da AWS, entre no serviço `EC2`
 2.  No menu da esquerda, entre em `Key Pairs`
