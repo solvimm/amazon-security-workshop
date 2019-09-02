@@ -506,11 +506,22 @@
             "Type": "AWS::EC2::Instance",
             "Metadata": {
                 "AWS::CloudFormation::Init": {
+                    "configSets": {
+                        "default": ["extras", "config"]
+                    },
+                    "extras": {
+                        "commands": {
+                            "enable_php": {
+                                "command": "amazon-linux-extras enable php7.2",
+                                "cwd": "~"
+                            }
+                        }
+                    },
                     "config": {
                         "packages": {
                             "yum": {
                                 "httpd": [],
-                                "php": "5.6.20",
+                                "php": [],
                                 "php-mysql": []
                             }
                         },
