@@ -8,6 +8,11 @@ Parameters:
     Type: String
     Default: EC2
     Description: Nome da instancia
+  LatestAmiId:
+    Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+    Default: '/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2'
+    AllowedValues:
+     - '/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2'
 
 Resources:
   GuardDuty:
@@ -18,7 +23,7 @@ Resources:
   MyInstance:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-0b898040803850657
+      ImageId: !Ref LatestAmiId
       InstanceType: t2.micro
       IamInstanceProfile: !Ref InstanceProfile
       Tags:
